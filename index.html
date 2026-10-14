@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Base 26 Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <button id="focus-toggle" title="Show only the result">◉</button>
+  <nav class="tabs">
+    <button class="tab active" data-page="timer" title="Timer">◷</button>
+    <button class="tab" data-page="calc" title="Calculator">±</button>
+    <button class="tab" data-page="convert" title="Converter">⇄</button>
+  </nav>
+
+  <main>
+
+    <!-- TIMER -->
+    <section class="page active" id="page-timer">
+      <div class="tokens result" id="timer-result"></div>
+      <div class="controls">
+        <button class="sym-btn" id="timer-toggle" title="Start / pause">▶</button>
+        <button class="sym-btn" id="timer-reset" title="Reset to zero">↺</button>
+      </div>
+      <div class="controls scale">
+        <button class="sym-btn" id="scale-down" title="Lower the scaler">−</button>
+        <div class="tokens small" id="scale-display"></div>
+        <button class="sym-btn" id="scale-up" title="Raise the scaler">+</button>
+        <button class="sym-btn" id="scale-mode" title="Switch between faster (×) and slower (÷)">⇅</button>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="page" id="page-calc">
+      <div class="tokens small expr" id="calc-expr"></div>
+      <div class="tokens result" id="calc-result"></div>
+      <div class="ops" id="calc-ops"></div>
+      <div class="keypad" id="calc-keys"></div>
+    </section>
+
+    <!-- CONVERTER -->
+    <section class="page" id="page-convert">
+      <div class="controls">
+        <span class="mode-label" id="conv-label"></span>
+        <button class="sym-btn" id="conv-swap" title="Swap direction">⇄</button>
+      </div>
+      <div class="tokens small expr" id="conv-input"></div>
+      <div class="tokens result" id="conv-result"></div>
+      <div class="ops" id="conv-ops"></div>
+      <div class="keypad" id="conv-keys"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
